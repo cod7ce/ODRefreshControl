@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.description = 'ODRefreshControl is a "pull down to refresh" control for UIScrollView,' \
                   'like the one Apple introduced in iOS6, but available to anyone from iOS4 and up.'
-  s.platform    = :ios
+  s.platform    = :ios, "7.0"
 
   s.source_files = 'ODRefreshControl/ODRefreshControl*.{h,m}'
   #s.clean_path   = 'Demo'
