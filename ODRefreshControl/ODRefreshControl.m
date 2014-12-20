@@ -168,8 +168,7 @@ static inline CGFloat lerp(CGFloat a, CGFloat b, CGFloat p)
     if ([keyPath isEqualToString:@"contentInset"]) {
         if (!_ignoreInset) {
             self.originalContentInset = [[change objectForKey:@"new"] UIEdgeInsetsValue];
-            double offset = SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0") ? 60.0 : 0.0;
-            self.frame = CGRectMake(0, -(kTotalViewHeight + self.scrollView.contentInset.top) + offset, self.scrollView.frame.size.width, kTotalViewHeight);
+            self.frame = CGRectMake(0, -(kTotalViewHeight + self.scrollView.contentInset.top) + 60.0, self.scrollView.frame.size.width, kTotalViewHeight);
         }
         return;
     }
